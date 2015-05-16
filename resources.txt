@@ -13,3 +13,4 @@ http://webresizer.com/resizer/
 ## minifiers
 https://kangax.github.io/html-minifier/
 http://jscompress.com/
+http://cssminifier.com/

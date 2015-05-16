@@ -424,7 +424,7 @@ var resizePizzas = function(size) {
 
   // Iterates through pizza elements on the page and changes their widths
   function changePizzaSizes(size) {
-    //console.log(size);
+    // we can determine the width percentage within this function
     switch(size) {
       case "1":
         newWidth = 25;
@@ -439,12 +439,12 @@ var resizePizzas = function(size) {
         console.log("bug in sizeSwitcher");
     }
 
-    //console.log(newWidth);
+    //query all pizza containers once, and outside the for loop
     var allPizzaContainers = document.querySelectorAll(".randomPizzaContainer");
 
     for (var i = 0; i < allPizzaContainers.length; i++) {
 
-      //console.log(allPizzaContainers[i]);
+      //new width as a percent of document width
       allPizzaContainers[i].style.width = newWidth + '%';
     }
   }
@@ -494,9 +494,11 @@ function updatePositions() {
   window.performance.mark("mark_start_frame");
 
   var items = document.querySelectorAll('.mover');
+  //We want to access the scrolled pixels outside of the for loop
   var cachedScrollTop=document.body.scrollTop;
 
   for (var i = 0; i < items.length; i++) {
+    //use the scroll pixels variable instead of reading it each iter.
     var phase=Math.sin((cachedScrollTop/1250)+(i%5));
     items[i].style.left=items[i].basicLeft+100*phase+'px';
   }
