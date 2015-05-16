@@ -29,6 +29,11 @@ Alternatively, you can serve it using the steps below:
 * changePizzaSizes() : removed multiple calls to over-complicated functions, determine container widths
 within this function.  Parse all pizza containers once outside of the for-loop.
 * updatePositions() : move the body.scrollTop parse to outside of the for loop, preventing FSL.
+* moved variable declarations to outside for loops
+* saved array lengths before for loops
+* use getElementById() and getElementByClassName() in place of querySelector()
+* enabled 'use strict'
+* moving pizzas generated based on window size
 
 ###Optimization to views/css/style.css
 
