@@ -142,6 +142,8 @@ pizzaIngredients.crusts = [
   "Stuffed Crust"
 ];
 
+'use strict';
+
 // Name generator pulled from http://saturdaykid.com/usernames/generator.html
 // Capitalizes first letter of each word
 String.prototype.capitalize = function() {
@@ -440,9 +442,12 @@ var resizePizzas = function(size) {
     }
 
     //query all pizza containers once, and outside the for loop
-    var allPizzaContainers = document.querySelectorAll(".randomPizzaContainer");
+    //getElementsByClassName() is faster than querySelectorAll()
+    var allPizzaContainers = document.getElementsByClassName('randomPizzaContainer');
+    //save the array length ouside of the for loop
+    var numberOfContainers = allPizzaContainers.length;
 
-    for (var i = 0; i < allPizzaContainers.length; i++) {
+    for (var i = 0; i < numberOfContainers; i++) {
 
       //new width as a percent
       allPizzaContainers[i].style.width = newWidth + '%';
@@ -493,11 +498,15 @@ function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
 
-  var items = document.querySelectorAll('.mover');
+  //replace querySelectorAll with getElementsByClassName
+  var items = document.getElementsByClassName('mover');
+
   //We want to access the scrolled pixels outside of the for loop
   var cachedScrollTop=document.body.scrollTop;
+  //Save the array length outside of the for loop
+  var numberOfItems = items.length;
 
-  for (var i = 0; i < items.length; i++) {
+  for (var i = 0; i < numberOfItems; i++) {
     //use the scroll pixels variable instead of reading it each iter.
     var phase=Math.sin((cachedScrollTop/1250)+(i%5));
     items[i].style.left=items[i].basicLeft+100*phase+'px';
