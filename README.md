@@ -26,10 +26,10 @@ Alternatively, you can serve it using the steps below:
 
 ###Optimizations to views/main.js
 
-*changePizzaSizes() : removed multiple calls to over-complicated functions, determine container widths
+* changePizzaSizes() : removed multiple calls to over-complicated functions, determine container widths
 within this function.  Parse all pizza containers once outside of the for-loop.
-*updatePositions() : move the body.scrollTop parse to outside of the for loop, preventing FSL.
+* updatePositions() : move the body.scrollTop parse to outside of the for loop, preventing FSL.
 
 ###Optimization to views/css/style.css
 
-*place .mover on own layers with will-change : transform
+* place .mover on own layers with will-change : transform
