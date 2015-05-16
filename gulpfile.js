@@ -35,6 +35,19 @@ var imagemin = require('gulp-imagemin');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 
+
+// Image compression Task
+gulp.task('images', function () {
+    return gulp.src('/views/images/*.jpg')
+        .pipe(imagemin({
+            progressive: true,
+            svgoPlugins: [{removeViewBox: false}],
+            //use: [pngquant()]
+        }))
+        .pipe(gulp.dest('dist/images'));
+});
+
+
 // Lint Task
 gulp.task('lint', function() {
     return gulp.src(['js/*.js', 'views/js/*.js'])
@@ -62,7 +75,7 @@ gulp.task('scripts', function() {
 // Watch Files For Changes
 gulp.task('watch', function() {
     gulp.watch(['js/*.js', 'views/js/*.js'], ['lint', 'scripts']);
-    //gulp.watch('scss/*.scss', ['sass']);
+
 });
 
 // Default Task
