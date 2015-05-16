@@ -1,0 +1,30 @@
+{
+  "name": "frontend-nanodegree-mobile-portfolio",
+  "version": "1.0.0",
+  "description": "FEWD mobile portfolio optimization project",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "foo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/almoav/frontend-nanodegree-mobile-portfolio.git"
+  },
+  "keywords": [
+    "udacity"
+  ],
+  "author": "almoav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/almoav/frontend-nanodegree-mobile-portfolio/issues"
+  },
+  "homepage": "https://github.com/almoav/frontend-nanodegree-mobile-portfolio",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-concat": "^2.5.2",
+    "gulp-jshint": "^1.10.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.0.1",
+    "gulp-uglify": "^1.2.0"
+  }
+}
