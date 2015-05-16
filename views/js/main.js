@@ -444,7 +444,7 @@ var resizePizzas = function(size) {
 
     for (var i = 0; i < allPizzaContainers.length; i++) {
 
-      //new width as a percent of document width
+      //new width as a percent
       allPizzaContainers[i].style.width = newWidth + '%';
     }
   }
