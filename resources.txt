@@ -1,0 +1,15 @@
+## http caching
+
+https://developer.mozilla.org/en-US/docs/Web/HTML/Using_the_application_cache#Testing_for_updates_to_the_cache_manifest
+
+http://www.w3schools.com/htmL/html5_app_cache.asp
+
+http://betterexplained.com/articles/how-to-optimize-your-site-with-http-caching/
+
+
+## image resizer
+http://webresizer.com/resizer/
+
+## minifiers
+https://kangax.github.io/html-minifier/
+http://jscompress.com/
